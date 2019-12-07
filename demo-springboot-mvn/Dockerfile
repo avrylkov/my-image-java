@@ -6,12 +6,13 @@ ENV PATH=/opt/rh/rh-maven35/root/usr/bin:$PATH
 ENV M2_HOME=/opt/rh/rh-maven35/root/usr/bin/mvn
 
 USER root
-COPY . /opt/build_dir
+#COPY . /opt/build_dir
 
-RUN cd /opt/build_dir && mvn -DskipTests package
+RUN mvn -DskipTests package
+#RUN cd /opt/build_dir && mvn -DskipTests package
 #RUN cd /opt/build_dir && ls -l
 
-RUN chmod -R 777 opt/build_dir/ && cd /opt/build_dir/target && ls -l
+#RUN chmod -R 777 opt/build_dir/ && cd /opt/build_dir/target && ls -l
 
 COPY target/demo.springboot.mvn-0.0.1-SNAPSHOT.jar /deployments/demo.springboot.jar
 
