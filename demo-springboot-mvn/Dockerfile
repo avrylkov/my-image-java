@@ -9,14 +9,14 @@ USER root
 RUN ls -l
 #COPY . /opt/build_dir
 
-RUN mvn -DskipTests package
+#RUN mvn -DskipTests package
 #RUN cd /opt/build_dir && mvn -DskipTests package
 #RUN cd /opt/build_dir && ls -l
 
 #RUN chmod -R 777 opt/build_dir/ && cd /opt/build_dir/target && ls -l
 
-COPY target/demo.springboot.mvn-0.0.1-SNAPSHOT.jar /deployments/demo.springboot.jar
+#COPY target/demo.springboot.mvn-0.0.1-SNAPSHOT.jar /deployments/demo.springboot.jar
 
-ENV JAVA_OPTS=""
+#ENV JAVA_OPTS=""
 
-ENTRYPOINT [ "sh", "-c", "java $JAVA_OPTS -jar /deployments/demo.springboot.jar" ]
+#ENTRYPOINT [ "sh", "-c", "java $JAVA_OPTS -jar /deployments/demo.springboot.jar" ]
