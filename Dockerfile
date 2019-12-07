@@ -15,5 +15,8 @@ RUN cd /opt/downloads && chmod +x *.sh && ./install.sh
 
 RUN cd /opt/downloads && rm -rf *.tar.gz
 
+CMD ["sh"]
+#ENTRYPOINT [ "sh", "-c", "ls"]
+
 #RUN apk update && apk add mc
 #CMD /usr/bin/mc
