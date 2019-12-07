@@ -6,6 +6,7 @@ ENV PATH=/opt/rh/rh-maven35/root/usr/bin:$PATH
 ENV M2_HOME=/opt/rh/rh-maven35/root/usr/bin/mvn
 
 USER root
+RUN ls -l
 #COPY . /opt/build_dir
 
 RUN mvn -DskipTests package
