@@ -11,9 +11,9 @@ COPY . /opt/build_dir
 RUN cd /opt/build_dir && mvn -DskipTests package
 #RUN cd /opt/build_dir && ls -l
 
-RUN cd /opt/build_dir && ls -l
+#RUN cd /opt/build_dir && ls -l
 
-COPY /target/demo.springboot.mvn-0.0.1-SNAPSHOT.jar /deployments/demo.springboot.jar
+COPY /opt/build_dir/target/demo.springboot.mvn-0.0.1-SNAPSHOT.jar /deployments/demo.springboot.jar
 
 ENV JAVA_OPTS=""
 
