@@ -8,7 +8,7 @@ ENV M2_HOME=/opt/rh/rh-maven35/root/usr/bin/mvn
 USER root
 COPY . /opt/build_dir
 
-RUN mvn -DskipTests package
+RUN cd /opt/build_dir && mvn -DskipTests package
 #RUN cd /opt/build_dir && ls -l
 
 COPY /target/demo.springboot.mvn-0.0.1-SNAPSHOT.jar /deployments/demo.springboot.jar
