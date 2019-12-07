@@ -6,10 +6,10 @@ ENV PATH=/opt/rh/rh-maven35/root/usr/bin:$PATH
 ENV M2_HOME=/opt/rh/rh-maven35/root/usr/bin/mvn
 
 USER root
-RUN ls -l
+RUN cd /demo-springboot-mvn && ls -l
 #COPY . /opt/build_dir
 
-#RUN mvn -DskipTests package
+RUN mvn -DskipTests package
 #RUN cd /opt/build_dir && mvn -DskipTests package
 #RUN cd /opt/build_dir && ls -l
 
