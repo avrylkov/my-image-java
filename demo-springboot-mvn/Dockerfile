@@ -5,7 +5,10 @@ MAINTAINER Rylkov Alexander <arylkov70@mail.ru>
 ENV PATH=/opt/rh/rh-maven35/root/usr/bin:$PATH
 ENV M2_HOME=/opt/rh/rh-maven35/root/usr/bin/mvn
 
-RUN mvn -DskipTests package
+USER root
+COPY . /opt/build_dir
+
+RUN cd /opt/build_dir/my-image-java/demo-springboot-mvn && mvn -DskipTests package
 
 COPY /target/demo.springboot.mvn-0.0.1-SNAPSHOT.jar /deployments/demo.springboot.jar
 

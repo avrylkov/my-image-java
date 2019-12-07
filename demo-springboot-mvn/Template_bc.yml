@@ -12,7 +12,7 @@ parameters:
   description: The name of application.
   displayName: Application Name
   required: true
-  value: openshift-jee-sample
+  value: openshift-springboot-sample
 - name: GIT_SOURCE_URL
   description: The source URL for the application
   displayName: Source URL
@@ -40,14 +40,14 @@ objects:
       strategy:
         dockerStrategy:
           dockerFilePath: Dockerfile
-      resources:
-        limits:
-          cpu: 2
-          memory: 2Gi
+      #resources:
+      #  limits:
+      #    cpu: 2
+      #    memory: 2Gi
       output:
         to:
           kind: ImageStreamTag
-          name: gradle-java-builder:latest
+          name: ${APP_NAME}:latest
       triggers:
         - type: ConfigChange
       successfulBuildsHistoryLimit: 5
@@ -55,4 +55,4 @@ objects:
   - apiVersion: v1
     kind: ImageStream
     metadata:
-      name: gradle-java-builder
+      name: ${APP_NAME}
