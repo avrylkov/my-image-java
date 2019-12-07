@@ -6,12 +6,9 @@ ENV PATH=/opt/rh/rh-maven35/root/usr/bin:$PATH
 ENV M2_HOME=/opt/rh/rh-maven35/root/usr/bin/mvn
 
 USER root
-RUN pwd && ls -l
-#COPY . /opt/build_dir
+COPY . /opt/build_dir
 
-RUN mvn -DskipTests package
-#RUN cd /opt/build_dir && mvn -DskipTests package
-#RUN cd /opt/build_dir && ls -l
+RUN cd /opt/build_dir && mvn -DskipTests package && pwd
 
 #RUN chmod -R 777 opt/build_dir/ && cd /opt/build_dir/target && ls -l
 
