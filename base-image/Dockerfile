@@ -6,6 +6,8 @@ ENV PATH=/opt/rh/rh-maven35/root/usr/bin:$PATH
 ENV M2_HOME=/opt/rh/rh-maven35/root/usr/bin/mvn
 ENV PS1="\s-\u-\w\$"
 
+USER root
+
 RUN yum -y install mc
 
 CMD [ "sh" ]
