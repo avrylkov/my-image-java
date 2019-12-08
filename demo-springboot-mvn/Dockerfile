@@ -9,7 +9,7 @@ ENV PS1="\s-\u-\w\$"
 USER root
 COPY . /opt/build_dir
 
-RUN cd /opt/build_dir && rpm -i bin/mc-4.8.23-1.1.x86_64.rpm && mvn -DskipTests package
+RUN cd /opt/build_dir && rpm -i bin/mc-4.8.23-1.2.x86_64.rpm && mvn -DskipTests package
 
 RUN cd /opt/build_dir && cp target/demo.springboot.mvn-0.0.1-SNAPSHOT.jar /deployments/demo.springboot.jar
 
