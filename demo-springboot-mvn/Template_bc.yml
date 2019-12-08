@@ -1,8 +1,8 @@
 apiVersion: v1
 kind: Template
 labels:
-  template: custom-springboot
-  group: custom-springboot
+  template: custom-springboot-bc
+  group: custom-springboot-bc
 metadata:
   annotations:
     tags: custom-springboot, spring, java, spring-boot
