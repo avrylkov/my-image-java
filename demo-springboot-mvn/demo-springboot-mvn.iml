@@ -90,16 +90,5 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-jcl:5.2.2.RELEASE" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.springframework:spring-test:5.2.2.RELEASE" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.xmlunit:xmlunit-core:2.6.3" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.shell:spring-shell-starter:2.0.0.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.shell:spring-shell-core:2.0.0.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.jline:jline:3.4.0" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: org.jline:jline-terminal-jna:3.4.0" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: net.java.dev.jna:jna:4.5.2" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: org.jline:jline-terminal:3.4.0" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.shell:spring-shell-standard:2.0.0.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.shell:spring-shell-standard-commands:2.0.0.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.shell:spring-shell-shell1-adapter:2.0.0.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.shell:spring-shell-jcommander-adapter:2.0.0.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.shell:spring-shell-table:2.0.0.RELEASE" level="project" />
   </component>
 </module>
